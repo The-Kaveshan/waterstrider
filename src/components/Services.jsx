@@ -1,5 +1,5 @@
 "use client";
-
+import { useRef, useState } from "react";
 import { Container } from "@/components/Container";
 import { Logomark } from "@/components/Logo";
 import { services } from "../app/siteData";
@@ -46,6 +46,12 @@ function DeviceUserIcon(props) {
 }
 
 function Service({ name, features, icon }) {
+  const [openFeature, setOpenFeature] = useState(null);
+
+  const handleFeatureClick = (title) => {
+    setOpenFeature(openFeature === title ? null : title);
+  };
+
   return (
     <section
       className={
@@ -62,10 +68,25 @@ function Service({ name, features, icon }) {
           className={"-my-2 divide-y text-sm divide-gray-200 text-gray-700"}
         >
           {features.map((feature) => (
-            <li key={feature.title} className="flex py-2">
-              <CheckIcon className={"h-6 w-6 flex-none text-cyan-500"} />
-              <span className="ml-4">{feature.title}</span>
-            </li>
+            <>
+              <li
+                key={feature.title}
+                className="flex py-2 hover:bg-cyan-100 hover:cursor-pointer"
+              >
+                <div
+                  className="flex cursor-pointer"
+                  onClick={() => handleFeatureClick(feature.title)}
+                >
+                  <CheckIcon className="h-6 w-6 flex-none text-cyan-500" />
+                  <span className="ml-4">{feature.title}</span>
+                </div>
+              </li>
+              {openFeature === feature.title && (
+                <div className=" p-4 bg-gray-100 text-gray-700">
+                  {feature.desc}
+                </div>
+              )}
+            </>
           ))}
         </ul>
       </div>
