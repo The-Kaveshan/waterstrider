@@ -4,7 +4,7 @@ import { Label, TextField } from "@/components/Fields";
 
 export function ContactUs() {
   return (
-    <footer className="border-t border-gray-200" id="contact">
+    <footer className="border-t border-gray-200 bg-gray-100" id="contact">
       <Container>
         <div className="flex flex-col pb-6 pt-16 lg:flex-row lg:py-16">
           <div className="relative z-10  w-2/5 lg:col-span-4 lg:max-w-none lg:pt-6 xl:col-span-3">
