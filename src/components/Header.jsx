@@ -1,17 +1,17 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
+import Link from "next/link";
 import {
   Popover,
   PopoverButton,
   PopoverBackdrop,
   PopoverPanel,
-} from '@headlessui/react'
-import { AnimatePresence, motion } from 'framer-motion'
+} from "@headlessui/react";
+import { AnimatePresence, motion } from "framer-motion";
 
-import { Container } from '@/components/Container'
-import { Logo } from '@/components/Logo'
-import { NavLinks } from '@/components/NavLinks'
+import { Container } from "@/components/Container";
+import { Logo } from "@/components/Logo";
+import { NavLinks } from "@/components/NavLinks";
 
 function MenuIcon(props) {
   return (
@@ -23,7 +23,7 @@ function MenuIcon(props) {
         strokeLinejoin="round"
       />
     </svg>
-  )
+  );
 }
 
 function ChevronUpIcon(props) {
@@ -36,7 +36,7 @@ function ChevronUpIcon(props) {
         strokeLinejoin="round"
       />
     </svg>
-  )
+  );
 }
 
 function MobileNavLink(props) {
@@ -46,7 +46,7 @@ function MobileNavLink(props) {
       className="block text-base leading-7 tracking-tight text-gray-700"
       {...props}
     />
-  )
+  );
 }
 
 export function Header() {
@@ -102,16 +102,15 @@ export function Header() {
                           className="absolute inset-x-0 top-0 z-0 origin-top rounded-b-2xl bg-gray-50 px-6 pb-6 pt-32 shadow-2xl shadow-gray-900/20"
                         >
                           <div className="space-y-4">
-                            <MobileNavLink href="/#features">
-                              Features
+                            <MobileNavLink href="/#offerings">
+                              What We Offer
                             </MobileNavLink>
-                            <MobileNavLink href="/#reviews">
-                              Reviews
+                            <MobileNavLink href="/#team">
+                              Meet the Team
                             </MobileNavLink>
-                            <MobileNavLink href="/#pricing">
-                              Pricing
+                            <MobileNavLink href="/#contact">
+                              Contact Us
                             </MobileNavLink>
-                            <MobileNavLink href="/#faqs">FAQs</MobileNavLink>
                           </div>
                         </PopoverPanel>
                       </>
@@ -124,5 +123,5 @@ export function Header() {
         </Container>
       </nav>
     </header>
-  )
+  );
 }
