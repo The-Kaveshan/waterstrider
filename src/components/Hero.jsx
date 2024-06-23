@@ -1,8 +1,8 @@
-import { useId } from 'react'
-import { Container } from '@/components/Container'
+import { useId } from "react";
+import { Container } from "@/components/Container";
 
 function BackgroundIllustration(props) {
-  let id = useId()
+  let id = useId();
 
   return (
     <div {...props}>
@@ -67,7 +67,7 @@ function BackgroundIllustration(props) {
         </defs>
       </svg>
     </div>
-  )
+  );
 }
 
 export function Hero() {
@@ -80,9 +80,8 @@ export function Hero() {
               Waterstrider
             </h1>
             <p className="mt-6 text-lg text-gray-600">
-              By leveraging insights from our network of industry insiders,
-              you'll know exactly when to buy to maximize profit, and exactly
-              when to sell to avoid painful losses.
+              Dive into the depths of water management with Waterstrider's
+              precision data analysis, leading the way to cleaner futures!
             </p>
           </div>
           <div className="relative mt-10 sm:mt-20 lg:col-span-5 lg:row-span-2 lg:mt-0 xl:col-span-6">
@@ -91,5 +90,5 @@ export function Hero() {
         </div>
       </Container>
     </div>
-  )
+  );
 }

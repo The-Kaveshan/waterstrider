@@ -12,7 +12,7 @@ export function Footer() {
           <Logomark className="h-10 w-10 flex-none fill-cyan-500" />
           <div className="ml-4">
             <p className="text-base font-semibold">Waterstrider</p>
-            <p className="mt-1 text-sm">Invest at the perfect time.</p>
+            <p className="mt-1 text-sm">Data-Driven Solutions</p>
           </div>
         </div>
       </div>
