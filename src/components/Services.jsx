@@ -1,9 +1,8 @@
 "use client";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { Container } from "@/components/Container";
-import { Logomark } from "@/components/Logo";
 import { services } from "../app/siteData";
-
+import { PageTitle } from "@/components/PageTitle";
 function CheckIcon(props) {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
@@ -103,19 +102,14 @@ export function Services() {
     >
       <Container>
         <div className="mx-auto max-w-2xl text-center">
-          <h2
-            id="pricing-title"
-            className="text-3xl font-medium tracking-tight text-gray-900"
-          >
-            Expert Services Tailored to You
-          </h2>
-          <p className="mt-2 text-lg text-gray-600">
-            At Waterstrider, we pride ourselves on delivering customized
+          <PageTitle
+            title={`Expert Services Tailored to You`}
+            subtitle={`At Waterstrider, we pride ourselves on delivering customized
             services that align with your specific needs. Our expertise spans
             various domains, ensuring that you receive the best possible
             solutions and outcomes. Take a look at our services to learn more
-            about how we can assist you.
-          </p>
+            about how we can assist you.`}
+          />
         </div>
 
         <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-10 sm:mt-20 lg:max-w-none lg:grid-cols-3">

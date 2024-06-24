@@ -5,7 +5,7 @@ import Image from "next/image";
 import helen from "@/images/helen.jpg";
 import sashnee from "@/images/sashnee.jpg";
 import rochelle from "@/images/rochelle.jpg";
-
+import { PageTitle } from "@/components/PageTitle";
 import Swiper, { Navigation, Pagination } from "swiper";
 
 const people = [
@@ -91,15 +91,13 @@ export function Team() {
     >
       <Container className="px-0">
         <div className="mx-auto max-w-2xl sm:text-center px-4">
-          <h2 className="text-3xl font-medium tracking-tight text-gray-900">
-            Meet Our Team
-          </h2>
-          <p className="mt-2 text-lg text-gray-400">
-            We're a dynamic group of individuals who are passionate about what
+          <PageTitle
+            title={`Meet Our Team`}
+            subtitle={`We're a dynamic group of individuals who are passionate about what
             we do and dedicated to delivering the best results for our clients.
             Each member brings unique skills and insights, ensuring that we
-            provide top-notch service and innovative solutions.
-          </p>
+            provide top-notch service and innovative solutions.`}
+          />
         </div>
         <div className="mt-16 md:hidden">
           <TeamMobile />
