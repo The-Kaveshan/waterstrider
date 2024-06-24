@@ -114,13 +114,13 @@ export function Team() {
                   className="aspect-[14/13] w-full rounded-2xl object-cover"
                   alt={person.image}
                 />
-                <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight">
+                <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-black">
                   {person.name}
                 </h3>
-                <p className="text-base leading-7 text-gray-600">
+                <p className="text-base leading-7 text-zinc-700">
                   {person.role}
                 </p>
-                <p className="text-sm leading-6 text-gray-400">{person.bio}</p>
+                <p className="text-sm leading-7 text-zinc-400">{person.bio}</p>
               </li>
             ))}
           </ul>
