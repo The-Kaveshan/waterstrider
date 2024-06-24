@@ -1,3 +1,7 @@
+import { TbBrandShopee } from "react-icons/tb";
+import { HiOutlineOfficeBuilding } from "react-icons/hi";
+import { PiStrategy } from "react-icons/pi";
+
 export const services = [
   {
     name: "Brands",
@@ -15,7 +19,7 @@ export const services = [
         desc: "Develop and optimize collaborative strategies with your supply chains to reduce operational risks and minimize the environmental impact of your supply chain activities. Implement initiatives that promote sustainable practices and resilience across the entire supply chain.",
       },
     ],
-    icon: "",
+    icon: <TbBrandShopee className="h-6 w-6 flex-none text-gray-500" />,
   },
   {
     name: "Corporate Head Office",
@@ -38,7 +42,9 @@ export const services = [
         desc: `Consolidate data for corporate reporting requirements, including CDP, CSRD, AWS, and SPTN standards. Save time while maintaining high-quality, auditable reporting.`,
       },
     ],
-    icon: "",
+    icon: (
+      <HiOutlineOfficeBuilding className="h-6 w-6 flex-none text-gray-500" />
+    ),
   },
   {
     name: "Operation",
@@ -76,6 +82,6 @@ export const services = [
         desc: `Incorporate financial water risk exposure into a $/kl water price. This approach facilitates effective capital investment decisions, ensuring timely and appropriate investments.`,
       },
     ],
-    icon: "",
+    icon: <PiStrategy className="h-6 w-6 flex-none text-gray-500" />,
   },
 ];
