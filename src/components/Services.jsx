@@ -5,6 +5,35 @@ import { services } from "../app/siteData";
 import { PageTitle } from "@/components/PageTitle";
 import { IoCheckmarkCircleOutline } from "react-icons/io5";
 
+export function Services() {
+  return (
+    <section
+      id="services"
+      aria-labelledby="pricing-title"
+      className="border-t border-gray-200 bg-gray-100 py-20 sm:py-32"
+    >
+      <Container>
+        <div className="mx-auto max-w-2xl text-center">
+          <PageTitle
+            title={`Expert Services Tailored to You`}
+            subtitle={`At Waterstrider, we pride ourselves on delivering customized
+            services that align with your specific needs. Our expertise spans
+            various domains, ensuring that you receive the best possible
+            solutions and outcomes. Take a look at our services to learn more
+            about how we can assist you.`}
+          />
+        </div>
+
+        <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-10 sm:mt-20 lg:max-w-none lg:grid-cols-3">
+          {services.map((service) => (
+            <Service key={service.name} {...service} />
+          ))}
+        </div>
+      </Container>
+    </section>
+  );
+}
+
 function Service({ name, features, icon }) {
   const [openFeature, setOpenFeature] = useState(null);
 
@@ -53,35 +82,6 @@ function Service({ name, features, icon }) {
           ))}
         </ul>
       </div>
-    </section>
-  );
-}
-
-export function Services() {
-  return (
-    <section
-      id="services"
-      aria-labelledby="pricing-title"
-      className="border-t border-gray-200 bg-gray-100 py-20 sm:py-32"
-    >
-      <Container>
-        <div className="mx-auto max-w-2xl text-center">
-          <PageTitle
-            title={`Expert Services Tailored to You`}
-            subtitle={`At Waterstrider, we pride ourselves on delivering customized
-            services that align with your specific needs. Our expertise spans
-            various domains, ensuring that you receive the best possible
-            solutions and outcomes. Take a look at our services to learn more
-            about how we can assist you.`}
-          />
-        </div>
-
-        <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-10 sm:mt-20 lg:max-w-none lg:grid-cols-3">
-          {services.map((service) => (
-            <Service key={service.name} {...service} />
-          ))}
-        </div>
-      </Container>
     </section>
   );
 }

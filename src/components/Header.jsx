@@ -12,32 +12,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Container } from "@/components/Container";
 import { Logo } from "@/components/Logo";
 import { NavLinks } from "@/components/NavLinks";
-
-function MenuIcon(props) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" {...props}>
-      <path
-        d="M5 6h14M5 18h14M5 12h14"
-        strokeWidth={2}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
-function ChevronUpIcon(props) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" {...props}>
-      <path
-        d="M17 14l-5-5-5 5"
-        strokeWidth={2}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
+import { IoMenu } from "react-icons/io5";
+import { IoChevronUpSharp } from "react-icons/io5";
 
 function MobileNavLink(props) {
   return (
@@ -51,7 +27,7 @@ function MobileNavLink(props) {
 
 export function Header() {
   return (
-    <header>
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow">
       <nav>
         <Container className="relative z-50 flex justify-between py-8">
           <div className="relative z-10 flex items-center gap-16">
@@ -72,9 +48,9 @@ export function Header() {
                   >
                     {({ open }) =>
                       open ? (
-                        <ChevronUpIcon className="h-6 w-6" />
+                        <IoChevronUpSharp className="h-6 w-6" />
                       ) : (
-                        <MenuIcon className="h-6 w-6" />
+                        <IoMenu className="h-6 w-6" />
                       )
                     }
                   </PopoverButton>

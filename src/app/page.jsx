@@ -10,11 +10,13 @@ export default function Home() {
   return (
     <>
       <Header />
-      <Hero />
-      <Services />
-      <Team />
-      <ContactUs />
-      <Footer />
+      <div className="mt-24">
+        <Hero />
+        <Services />
+        <Team />
+        <ContactUs />
+        <Footer />
+      </div>
     </>
   );
 }
