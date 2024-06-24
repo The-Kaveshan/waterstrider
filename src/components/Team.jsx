@@ -73,7 +73,7 @@ function TeamMobile() {
               {person.name}
             </h3>
             <p className="text-base leading-7 text-gray-600">{person.role}</p>
-            <p className="text-sm leading-6 text-gray-400">{person.bio}</p>
+            <p className="text-sm leading-7 text-gray-400">{person.bio}</p>
           </div>
         ))}
       </div>
