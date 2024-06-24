@@ -45,7 +45,7 @@ export function ContactUs() {
                   name="message"
                   id="message"
                   rows="5"
-                  className="block w-full h-24 max-h-96 appearance-none rounded-lg border border-gray-200 bg-white py-2 px-3 text-gray-900 placeholder:text-gray-400 focus:border-cyan-500 focus:outline-none focus:ring-cyan-500 sm:text-sm"
+                  className="block w-full h-24 max-h-96 appearance-none rounded-lg border border-gray-200 bg-white py-2 px-3 text-gray-900 placeholder:text-gray-400 focus:border-cyan-500 focus:outline-none focus:ring-cyan-500 text-xs sm:text-sm"
                   required
                 ></textarea>
               </div>

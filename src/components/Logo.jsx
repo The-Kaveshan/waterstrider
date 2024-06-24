@@ -2,7 +2,7 @@ import wsLogo from "@/images/wsLogo.svg";
 import Image from "next/image";
 
 export function Logomark(props) {
-  return <Image src={wsLogo} height={40} />;
+  return <Image src={wsLogo} height={40} alt={"logo"} />;
 }
 
 export function Logo(props) {

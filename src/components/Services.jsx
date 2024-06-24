@@ -29,7 +29,7 @@ function Service({ name, features, icon }) {
           className={"-my-2 divide-y text-sm divide-gray-200 text-gray-700"}
         >
           {features.map((feature) => (
-            <>
+            <div key={feature.title}>
               <li
                 key={feature.title}
                 className="flex py-2 hover:bg-sky-100 hover:cursor-pointer"
@@ -49,7 +49,7 @@ function Service({ name, features, icon }) {
                   {feature.desc}
                 </div>
               )}
-            </>
+            </div>
           ))}
         </ul>
       </div>

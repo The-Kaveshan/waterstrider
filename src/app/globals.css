@@ -10,3 +10,7 @@
     height: 100%;
     z-index: -1;
   }
+
+  .swiper-container {
+    overflow-x: hidden;
+  }
